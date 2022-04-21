@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="broucek_05_02_studenti.FXMLDocumentController">
+   <center>
+      <PieChart fx:id="pieChart_EvidenceStudentu" prefHeight="400.0" prefWidth="327.0" BorderPane.alignment="CENTER" />
+   </center>
+   <left>
+      <TableView fx:id="tableEvidenceStudentu" editable="true" prefHeight="400.0" prefWidth="285.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="tableColum_Id" onEditCommit="#tableEditColumId" prefWidth="61.0" text="ID" />
+          <TableColumn fx:id="tableColum_Jmeno" onEditCommit="#tableEditColumJmeno" prefWidth="66.0" text="JM" />
+            <TableColumn fx:id="tableColum_Prijmeni" onEditCommit="#tableEditColumPrijmeni" prefWidth="70.0" text="PR" />
+            <TableColumn fx:id="tableColum_Rocnik" onEditCommit="#tableEditColumRocnik" prefWidth="86.0" text="Ročník" />
+        </columns>
+      </TableView>
+   </left>
+   <bottom>
+      <FlowPane alignment="CENTER" hgap="10.0" prefHeight="53.0" prefWidth="600.0" vgap="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnPridej" mnemonicParsing="false" onAction="#HandleBtnOnActionPridej" prefHeight="25.0" prefWidth="93.0" text="Pridej" />
+         </children>
+      </FlowPane>
+   </bottom>
+</BorderPane>
